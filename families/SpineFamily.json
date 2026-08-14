@@ -1,0 +1,15 @@
+{
+	"name": "SpineFamily",
+	"plugin-id": "Gritsenko_Spine",
+	"sid": 881571084086629,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"hrp_panda",
+		"hrp_backpack",
+		"ls_clamshells",
+		"ls_crab",
+		"ls_divers"
+	]
+}

@@ -1,0 +1,405 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 44903,
+	"name": "anitest",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Gritsenko_Spine",
+			"name": "Spine",
+			"author": "Gritsenko and Mikal",
+			"bundled": false,
+			"version": "2.9.1"
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "List",
+			"name": "List",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "6b4dz2uu9pp",
+	"objectTypes": {
+		"items": [
+			"hrp_panda",
+			"hrp_backpack",
+			"AJAX",
+			"JSON",
+			"List_Animations",
+			"Button",
+			"Browser",
+			"List_Objects",
+			"Spawn_Point",
+			"List_Skins",
+			"ls_clamshells",
+			"ls_crab",
+			"ls_divers"
+		],
+		"subfolders": []
+	},
+	"functionsName": "Functions",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"SpineFamily"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Layout 1"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Event sheet v1",
+			"Event sheet v2"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 849306726920655,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 695463265770889,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 941467348186979,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 176786506853251,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 398178707624403,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 389979181403108,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 758776764602088,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "hrp_panda.json",
+					"type": "application/json",
+					"sid": 964040911211312,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hrp_panda.png",
+					"type": "image/png",
+					"sid": 998755225430625,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hrp_panda.txt",
+					"type": "text/plain",
+					"sid": 979900695637866,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hrp_panda_2.png",
+					"type": "image/png",
+					"sid": 807708966053628,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hrp_panda_3.png",
+					"type": "image/png",
+					"sid": 112659000932337,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hrp_backpack.txt",
+					"type": "text/plain",
+					"sid": 359633492519968,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hrp_backpack.png",
+					"type": "image/png",
+					"sid": 269295661090438,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hrp_backpack.json",
+					"type": "application/json",
+					"sid": 987605071780784,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ls_clamshells.png",
+					"type": "image/png",
+					"sid": 257967235678022,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ls_clamshells.json",
+					"type": "application/json",
+					"sid": 737947952173995,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ls_clamshells.txt",
+					"type": "text/plain",
+					"sid": 542155575765746,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ls_crab.TXT",
+					"type": "text/plain",
+					"sid": 910656735191540,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ls_crab.png",
+					"type": "image/png",
+					"sid": 268090461437014,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ls_crab.json",
+					"type": "application/json",
+					"sid": 592824352484624,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ls_divers.TXT",
+					"type": "text/plain",
+					"sid": 400347202310733,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ls_divers.png",
+					"type": "image/png",
+					"sid": 923449672423825,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ls_divers.json",
+					"type": "application/json",
+					"sid": 683873951059926,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": [
+				{
+					"items": [],
+					"subfolders": [],
+					"name": "panda"
+				}
+			]
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Flowchart 1"
+		],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"autoIncrementVersion": false,
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"multitexturing": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 854,
+	"viewportHeight": 480,
+	"firstLayout": null
+}

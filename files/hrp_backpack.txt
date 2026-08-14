@@ -1,0 +1,13 @@
+hrp_backpack.png
+size:859,661
+filter:Linear,Linear
+pma:true
+scale:0.95
+hrp_backpack
+bounds:2,2,703,657
+hrp_panda_1
+bounds:707,491,168,150
+rotate:90
+hrp_panda_2
+bounds:707,321,168,150
+rotate:90
