@@ -1,0 +1,71 @@
+/* Styl dla list (dropdown) w projekcie anitest */
+.ui-list {
+	background-color: #252a3a;
+	color: #e6e9f2;
+	font-family: "Segoe UI", system-ui, sans-serif;
+	font-size: 20px;
+	border: 2px solid #3d4463;
+	border-radius: 10px;
+	padding: 6px 10px;
+	cursor: pointer;
+}
+
+.ui-list:focus {
+	outline: none;
+	border-color: #6c7cf0;
+	box-shadow: 0 0 0 3px rgba(108, 124, 240, 0.25);
+}
+
+.ui-list option {
+	background-color: #1e2230;
+	color: #e6e9f2;
+}
+
+/* Switch do przełączania trybów (Button jako checkbox) */
+.ui-switch {
+	display: inline-flex;
+	align-items: center;
+	color: #e6e9f2;
+	font-family: "Segoe UI", system-ui, sans-serif;
+	cursor: pointer;
+	user-select: none;
+}
+
+.ui-switch input[type="checkbox"],
+input[type="checkbox"].ui-switch {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 60px;
+	height: 30px;
+	border-radius: 999px;
+	background-color: #3d4463;
+	border: 2px solid #4a4f6a;
+	position: relative;
+	margin: 0;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.ui-switch input[type="checkbox"]::after,
+input[type="checkbox"].ui-switch::after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background-color: #e6e9f2;
+	transition: transform 0.2s ease;
+}
+
+.ui-switch input[type="checkbox"]:checked,
+input[type="checkbox"].ui-switch:checked {
+	background-color: #6c7cf0;
+	border-color: #6c7cf0;
+}
+
+.ui-switch input[type="checkbox"]:checked::after,
+input[type="checkbox"].ui-switch:checked::after {
+	transform: translateX(32px);
+}

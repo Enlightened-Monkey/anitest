@@ -1,0 +1,179 @@
+{
+	"name": "ES_Camera",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "PanStartX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 432415871207119
+		},
+		{
+			"eventType": "variable",
+			"name": "PanStartY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 334405120739678
+		},
+		{
+			"eventType": "variable",
+			"name": "CamStartX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 878559068532366
+		},
+		{
+			"eventType": "variable",
+			"name": "CamStartY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 682207339094905
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 935071773402720,
+					"parameters": {
+						"mouse-button": "middle",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 765868994001475,
+					"parameters": {
+						"variable": "PanStartX",
+						"value": "Mouse.AbsoluteX"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 251134443023776,
+					"parameters": {
+						"variable": "PanStartY",
+						"value": "Mouse.AbsoluteY"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 324693100294058,
+					"parameters": {
+						"variable": "CamStartX",
+						"value": "scrollx"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 288285665136017,
+					"parameters": {
+						"variable": "CamStartY",
+						"value": "scrolly"
+					}
+				}
+			],
+			"sid": 616977786419147
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "mouse-button-is-down",
+					"objectClass": "Mouse",
+					"sid": 198554816547796,
+					"parameters": {
+						"mouse-button": "middle"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-x",
+					"objectClass": "System",
+					"sid": 407651384871010,
+					"parameters": {
+						"x": "clamp(CamStartX - (Mouse.AbsoluteX - PanStartX), 0, TiledBackground.Width)"
+					}
+				},
+				{
+					"id": "scroll-to-y",
+					"objectClass": "System",
+					"sid": 679879094559874,
+					"parameters": {
+						"y": "clamp(CamStartY - (Mouse.AbsoluteY - PanStartY), 0, TiledBackground.Height)"
+					}
+				}
+			],
+			"sid": 213846178380005
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-mouse-wheel",
+					"objectClass": "Mouse",
+					"sid": 743773974041023,
+					"parameters": {
+						"direction": "up"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 667879302640051,
+					"parameters": {
+						"scale": "LayoutScale + 0.1"
+					}
+				}
+			],
+			"sid": 394576761461276
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-mouse-wheel",
+					"objectClass": "Mouse",
+					"sid": 875385269175889,
+					"parameters": {
+						"direction": "down"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 170345331485330,
+					"parameters": {
+						"scale": "LayoutScale - 0.1"
+					}
+				}
+			],
+			"sid": 117163979962063
+		}
+	],
+	"sid": 598927913962536
+}

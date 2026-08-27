@@ -1,0 +1,466 @@
+{
+	"name": "ES_Grid",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "MatrixIndex",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 828385559517675
+		},
+		{
+			"eventType": "variable",
+			"name": "TempSkin",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 812269823808232
+		},
+		{
+			"eventType": "variable",
+			"name": "TempAnim",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 561870315192221
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 805422639426565
+				}
+			],
+			"actions": [],
+			"sid": 683691552683924,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 242560460660240,
+							"parameters": {
+								"variable": "ISGridView"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "List_Animations",
+							"sid": 512345678901272,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "List_Objects",
+							"sid": 512345678901273,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "List_Skins",
+							"sid": 512345678901274,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"callFunction": "LoadGrid",
+							"sid": 162630384885831
+						}
+					],
+					"sid": 933778447901280
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 512345678901275,
+							"parameters": {
+								"variable": "ISGridView"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "List_Animations",
+							"sid": 512345678901276,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "List_Objects",
+							"sid": 512345678901277,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "List_Skins",
+							"sid": 512345678901278,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 512345678901279
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Button",
+					"sid": 860820866784638
+				}
+			],
+			"actions": [],
+			"sid": 629532146849911,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 330785512648919,
+							"parameters": {
+								"variable": "ISGridView"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 149382919275080
+						}
+					],
+					"sid": 246531373130158
+				}
+			]
+		},
+		{
+			"functionName": "LoadGrid",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "SpineFamily",
+					"sid": 512345678901249
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 846378296541316,
+					"parameters": {
+						"variable": "MatrixIndex",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 438787238595731,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 717953985948603,
+							"parameters": {
+								"name": "\"GridLoop\"",
+								"start-index": "0",
+								"end-index": "List_Objects.ItemCount - 1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-url",
+							"objectClass": "AJAX",
+							"sid": 512345678901238,
+							"parameters": {
+								"tag": "List_Objects.ItemTextAt(loopindex(\"GridLoop\"))",
+								"url": "List_Objects.ItemTextAt(loopindex(\"GridLoop\")) & \".json\""
+							}
+						}
+					],
+					"sid": 237410490213188
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-completed",
+					"objectClass": "AJAX",
+					"sid": 512345678901239
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 512345678901269,
+					"parameters": {
+						"variable": "ISGridView"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "parse",
+					"objectClass": "JSON",
+					"sid": 512345678901240,
+					"parameters": {
+						"data": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 512345678901241,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "JSON",
+							"sid": 512345678901242,
+							"parameters": {
+								"path": "\"animations\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 512345678901243,
+							"parameters": {
+								"variable": "TempAnim",
+								"value": "JSON.CurrentKey"
+							}
+						}
+					],
+					"sid": 512345678901244,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 512345678901245,
+									"parameters": {
+										"name": "\"SkinsLoop\"",
+										"start-index": "0",
+										"end-index": "JSON.ArraySize(\"skins\") - 1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 512345678901246,
+									"parameters": {
+										"variable": "TempSkin",
+										"value": "JSON.Get(\"skins.\" & loopindex(\"SkinsLoop\") & \".name\")"
+									}
+								},
+								{
+									"callFunction": "SpawnMatrixItem",
+									"sid": 512345678901247,
+									"parameters": [
+										"AJAX.Tag",
+										"TempSkin",
+										"TempAnim",
+										"300 + (MatrixIndex % 3) * CellSize",
+										"300 + floor(MatrixIndex / 3) * CellSize"
+									]
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 512345678901250,
+									"parameters": {
+										"variable": "MatrixIndex",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 512345678901248
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "TiledBackground",
+							"sid": 883830771804083,
+							"parameters": {
+								"width": "1800",
+								"height": "ceil(MatrixIndex / 3) * CellSize + 300"
+							}
+						}
+					],
+					"sid": 523503857333276
+				}
+			]
+		},
+		{
+			"functionName": "SpawnMatrixItem",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "ObjectName",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 719477306841436
+				},
+				{
+					"name": "Skin",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 512345678901251
+				},
+				{
+					"name": "Anim",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 512345678901252
+				},
+				{
+					"name": "X",
+					"type": "number",
+					"initialValue": "",
+					"comment": "",
+					"sid": 512345678901253
+				},
+				{
+					"name": "Y",
+					"type": "number",
+					"initialValue": "",
+					"comment": "",
+					"sid": 512345678901254
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object-by-name",
+					"objectClass": "System",
+					"sid": 272545731428354,
+					"parameters": {
+						"object-name": "ObjectName",
+						"layer": "1",
+						"x": "X",
+						"y": "Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 512345678901255,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				}
+			],
+			"sid": 841478658559976,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "SpineFamily",
+							"sid": 556116030745982,
+							"parameters": {
+								"comparison": 0,
+								"x-co-ordinate": "X"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "SpineFamily",
+							"sid": 944501962810962,
+							"parameters": {
+								"comparison": 0,
+								"y-co-ordinate": "Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-skin",
+							"objectClass": "SpineFamily",
+							"sid": 512470359667057,
+							"parameters": {
+								"skin-name": "Skin"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "SpineFamily",
+							"sid": 377423445362062,
+							"parameters": {
+								"animation-name": "Anim",
+								"loop": true,
+								"start": "beginning",
+								"track-index": "0"
+							}
+						}
+					],
+					"sid": 960273237162619
+				}
+			]
+		}
+	],
+	"sid": 512345678901234
+}

@@ -1,0 +1,93 @@
+{
+	"name": "ES_Main",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Camera"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ES_LIST"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Grid"
+		},
+		{
+			"eventType": "variable",
+			"name": "CellSize",
+			"type": "number",
+			"initialValue": "600",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 131907540826903
+		},
+		{
+			"eventType": "variable",
+			"name": "ISGridView",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 710342298943847
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 512345678901281
+				}
+			],
+			"actions": [
+				{
+					"id": "set-image-scale-x",
+					"objectClass": "TiledBackground",
+					"sid": 512345678901282,
+					"parameters": {
+						"scale-x": "CellSize*100"
+					}
+				},
+				{
+					"id": "set-image-scale-y",
+					"objectClass": "TiledBackground",
+					"sid": 512345678901283,
+					"parameters": {
+						"scale-y": "CellSize*100"
+					}
+				}
+			],
+			"sid": 512345678901285,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 512345678901286,
+							"parameters": {
+								"variable": "ISGridView"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-checked",
+							"objectClass": "Button",
+							"sid": 512345678901284,
+							"parameters": {
+								"state": "checked"
+							}
+						}
+					],
+					"sid": 512345678901287
+				}
+			]
+		}
+	],
+	"sid": 587111051811118
+}

@@ -2,39 +2,45 @@
 	"name": "Layout 1",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "Background",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Button",
+					"type": "TiledBackground",
 					"properties": {
-						"type": "button",
-						"text": "OK",
-						"tooltip": "",
 						"initially-visible": true,
-						"enabled": true,
-						"auto-font-size": true,
-						"checked": false,
-						"id": "",
-						"class": ""
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0,
+						"enable-tile-randomization": false,
+						"x-random": 1,
+						"y-random": 1,
+						"angle-random": 1,
+						"blend-margin-x": 0.1,
+						"blend-margin-y": 0.1
 					},
-					"uid": 5,
-					"sid": 411166104339122,
+					"uid": 15,
+					"sid": 677003575973984,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 411166104339122,
+						"sid": 677003575973984,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 34,
-						"y": 145,
-						"width": 72,
-						"height": 24,
+						"x": 0,
+						"y": 0,
+						"width": 1800,
+						"height": 1800,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -42,87 +48,46 @@
 							1,
 							1,
 							1
-						]
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
-				},
-				{
-					"type": "List_Animations",
-					"properties": {
-						"items": "Item 1\nItem 2\nItem 3",
-						"tooltip": "",
-						"initially-visible": true,
-						"enabled": true,
-						"type": "dropdown-list",
-						"multi-select": false,
-						"auto-font-size": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 7,
-					"sid": 945585379141966,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 945585379141966,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 33,
-						"y": 70,
-						"width": 150,
-						"height": 22,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
-					"type": "List_Objects",
-					"properties": {
-						"items": "Item 1\nItem 2\nItem 3",
-						"tooltip": "",
-						"initially-visible": true,
-						"enabled": true,
-						"type": "dropdown-list",
-						"multi-select": false,
-						"auto-font-size": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 4,
-					"sid": 147169645731474,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 147169645731474,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 34,
-						"y": 40,
-						"width": 150,
-						"height": 22,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
+				}
+			],
+			"sid": 963911403846530,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
 				{
 					"type": "Spawn_Point",
 					"properties": {
@@ -144,8 +109,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 565,
-						"y": 249,
+						"x": 900,
+						"y": 900,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -158,45 +123,6 @@
 						],
 						"angle": 0,
 						"zElevation": 0
-					}
-				},
-				{
-					"type": "List_Skins",
-					"properties": {
-						"items": "Item 1\nItem 2\nItem 3",
-						"tooltip": "",
-						"initially-visible": true,
-						"enabled": true,
-						"type": "dropdown-list",
-						"multi-select": false,
-						"auto-font-size": true,
-						"id": "",
-						"class": ""
-					},
-					"uid": 9,
-					"sid": 182307083600703,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 182307083600703,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 35,
-						"y": 103,
-						"width": 150,
-						"height": 22,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
 					}
 				},
 				{
@@ -383,8 +309,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 96,
-						"y": 231,
+						"x": 426,
+						"y": -142,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -433,8 +359,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 102,
-						"y": -141,
+						"x": 178,
+						"y": -270,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -467,10 +393,201 @@
 				0.3686274509803922,
 				1
 			],
-			"isTransparent": false,
+			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "UI",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Button",
+					"properties": {
+						"type": "checkbox",
+						"text": "",
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"auto-font-size": true,
+						"checked": false,
+						"id": "",
+						"class": "ui-switch"
+					},
+					"uid": 5,
+					"sid": 411166104339122,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 411166104339122,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1170,
+						"y": 1450,
+						"width": 120,
+						"height": 40,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "List_Animations",
+					"properties": {
+						"items": "Item 1\nItem 2\nItem 3",
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"type": "dropdown-list",
+						"multi-select": false,
+						"auto-font-size": false,
+						"id": "",
+						"class": "ui-list"
+					},
+					"uid": 7,
+					"sid": 945585379141966,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 945585379141966,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 837,
+						"y": 1420,
+						"width": 240,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "List_Objects",
+					"properties": {
+						"items": "Item 1\nItem 2\nItem 3",
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"type": "dropdown-list",
+						"multi-select": false,
+						"auto-font-size": false,
+						"id": "",
+						"class": "ui-list"
+					},
+					"uid": 4,
+					"sid": 147169645731474,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 147169645731474,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 344,
+						"y": 1418,
+						"width": 240,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "List_Skins",
+					"properties": {
+						"items": "Item 1\nItem 2\nItem 3",
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"type": "dropdown-list",
+						"multi-select": false,
+						"auto-font-size": false,
+						"id": "",
+						"class": "ui-list"
+					},
+					"uid": 9,
+					"sid": 182307083600703,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 182307083600703,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 593,
+						"y": 1417,
+						"width": 240,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				}
+			],
+			"sid": 895814029358950,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 0,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",
@@ -498,9 +615,9 @@
 	"effectTypes": [],
 	"width": 1708,
 	"height": 960,
-	"unboundedScrolling": false,
+	"unboundedScrolling": true,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet v2"
+	"eventSheet": "ES_Main"
 }

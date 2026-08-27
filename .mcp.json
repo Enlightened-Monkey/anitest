@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "construct3": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["/home/mwrona/construct3-mcp/dist/index.js"]
+    }
+  }
+}

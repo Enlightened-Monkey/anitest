@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet v2",
+	"name": "ES_LIST",
 	"events": [
 		{
 			"eventType": "block",
@@ -7,27 +7,27 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 276095145693889
+					"sid": 326235074289803
 				}
 			],
 			"actions": [
 				{
 					"id": "clear",
 					"objectClass": "List_Skins",
-					"sid": 338391423772942
+					"sid": 596824529189446
 				},
 				{
 					"id": "clear",
 					"objectClass": "List_Objects",
-					"sid": 574518792809179
+					"sid": 897004339961516
 				},
 				{
 					"id": "clear",
 					"objectClass": "List_Skins",
-					"sid": 865229992241855
+					"sid": 436132701400960
 				}
 			],
-			"sid": 824725462003258,
+			"sid": 945583741269985,
 			"children": [
 				{
 					"eventType": "block",
@@ -35,7 +35,7 @@
 						{
 							"id": "for-each",
 							"objectClass": "System",
-							"sid": 604529062199555,
+							"sid": 479719702687661,
 							"parameters": {
 								"object": "SpineFamily"
 							}
@@ -45,7 +45,7 @@
 						{
 							"id": "add-item",
 							"objectClass": "List_Objects",
-							"sid": 251773812661612,
+							"sid": 823871718429054,
 							"parameters": {
 								"text": "SpineFamily.ObjectTypeName"
 							}
@@ -53,29 +53,39 @@
 						{
 							"id": "destroy",
 							"objectClass": "SpineFamily",
-							"sid": 373229926681537
+							"sid": 499763420663316
 						}
 					],
-					"sid": 224875758848124
+					"sid": 336947711456418
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 512345678901235,
+							"parameters": {
+								"variable": "ISGridView"
+							},
+							"isInverted": true
+						}
+					],
 					"actions": [
 						{
 							"id": "set-selection",
 							"objectClass": "List_Objects",
-							"sid": 521395916103118,
+							"sid": 895038595197602,
 							"parameters": {
 								"index": "0"
 							}
 						},
 						{
 							"callFunction": "LoadModel",
-							"sid": 449717938152370
+							"sid": 701409258288939
 						}
 					],
-					"sid": 538833213002902
+					"sid": 843451620978734
 				}
 			]
 		},
@@ -85,16 +95,25 @@
 				{
 					"id": "on-selection-changed",
 					"objectClass": "List_Objects",
-					"sid": 289074208766132
+					"sid": 635458025891205
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 512345678901236,
+					"parameters": {
+						"variable": "ISGridView"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
 				{
 					"callFunction": "LoadModel",
-					"sid": 282367228379198
+					"sid": 581099402052703
 				}
 			],
-			"sid": 675294803862258
+			"sid": 381462551865343
 		},
 		{
 			"eventType": "block",
@@ -102,20 +121,29 @@
 				{
 					"id": "on-any-completed",
 					"objectClass": "AJAX",
-					"sid": 436331781168413
+					"sid": 781813290879462
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 512345678901268,
+					"parameters": {
+						"variable": "ISGridView"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
 				{
 					"id": "parse",
 					"objectClass": "JSON",
-					"sid": 790685276861782,
+					"sid": 931464035593629,
 					"parameters": {
 						"data": "AJAX.LastData"
 					}
 				}
 			],
-			"sid": 579356132835164,
+			"sid": 301266206203394,
 			"children": [
 				{
 					"eventType": "block",
@@ -123,7 +151,7 @@
 						{
 							"id": "for-each",
 							"objectClass": "JSON",
-							"sid": 349123599404663,
+							"sid": 658256516719656,
 							"parameters": {
 								"path": "\"animations\""
 							}
@@ -133,13 +161,13 @@
 						{
 							"id": "add-item",
 							"objectClass": "List_Animations",
-							"sid": 290350004068160,
+							"sid": 295648208623484,
 							"parameters": {
 								"text": "JSON.CurrentKey"
 							}
 						}
 					],
-					"sid": 718841317861201
+					"sid": 357937268807692
 				},
 				{
 					"eventType": "block",
@@ -147,7 +175,7 @@
 						{
 							"id": "for",
 							"objectClass": "System",
-							"sid": 222163920119046,
+							"sid": 926957156406556,
 							"parameters": {
 								"name": "\"SkinsLoop\"",
 								"start-index": "0",
@@ -159,13 +187,13 @@
 						{
 							"id": "add-item",
 							"objectClass": "List_Skins",
-							"sid": 678373963663391,
+							"sid": 743981371799205,
 							"parameters": {
 								"text": "JSON.Get(\"skins.\" & loopindex(\"SkinsLoop\") & \".name\")"
 							}
 						}
 					],
-					"sid": 442003387546751
+					"sid": 447777349840995
 				}
 			]
 		},
@@ -175,33 +203,33 @@
 				{
 					"id": "on-any-error",
 					"objectClass": "AJAX",
-					"sid": 362863237809603
+					"sid": 384529172219791
 				}
 			],
 			"actions": [
 				{
 					"id": "log",
 					"objectClass": "Browser",
-					"sid": 141049349123606,
+					"sid": 903306295582235,
 					"parameters": {
 						"type": "log",
 						"message": "\"Błąd zapytania AJAX. Brak pliku dla tagu: \" & AJAX.Tag"
 					}
 				}
 			],
-			"sid": 270040834044617
+			"sid": 587527087097043
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-clicked",
-					"objectClass": "Button",
-					"sid": 798267843098464
+					"id": "on-selection-changed",
+					"objectClass": "List_Animations",
+					"sid": 512345678901270
 				}
 			],
 			"actions": [],
-			"sid": 795876066874426,
+			"sid": 512345678901271,
 			"children": [
 				{
 					"eventType": "block",
@@ -209,7 +237,7 @@
 						{
 							"id": "for-each",
 							"objectClass": "System",
-							"sid": 936024722801027,
+							"sid": 661593507673639,
 							"parameters": {
 								"object": "SpineFamily"
 							}
@@ -219,7 +247,7 @@
 						{
 							"id": "set-animation",
 							"objectClass": "SpineFamily",
-							"sid": 900949135212391,
+							"sid": 405946439351977,
 							"parameters": {
 								"animation-name": "List_Animations.SelectedText",
 								"loop": true,
@@ -228,7 +256,7 @@
 							}
 						}
 					],
-					"sid": 522717065007846
+					"sid": 488929787572131
 				}
 			]
 		},
@@ -238,20 +266,20 @@
 				{
 					"id": "on-selection-changed",
 					"objectClass": "List_Skins",
-					"sid": 260088649116933
+					"sid": 452808926085182
 				}
 			],
 			"actions": [
 				{
 					"id": "set-skin",
 					"objectClass": "SpineFamily",
-					"sid": 153528043753682,
+					"sid": 848410904966723,
 					"parameters": {
 						"skin-name": "List_Skins.SelectedText"
 					}
 				}
 			],
-			"sid": 138061834568170
+			"sid": 320555078157083
 		},
 		{
 			"functionName": "LoadModel",
@@ -267,22 +295,22 @@
 				{
 					"id": "destroy",
 					"objectClass": "SpineFamily",
-					"sid": 240069408943587
+					"sid": 144788005829252
 				},
 				{
 					"id": "clear",
 					"objectClass": "List_Animations",
-					"sid": 545561625934008
+					"sid": 795937383835104
 				},
 				{
 					"id": "clear",
 					"objectClass": "List_Skins",
-					"sid": 463666575722679
+					"sid": 862773159092376
 				},
 				{
 					"id": "request-url",
 					"objectClass": "AJAX",
-					"sid": 305607534750480,
+					"sid": 270421440657987,
 					"parameters": {
 						"tag": "List_Objects.SelectedText",
 						"url": "List_Objects.SelectedText & \".json\""
@@ -291,7 +319,7 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 529538572541372,
+					"sid": 786696933906105,
 					"parameters": {
 						"object-name": "List_Objects.SelectedText",
 						"layer": "0",
@@ -302,9 +330,18 @@
 					}
 				},
 				{
+					"id": "set-size",
+					"objectClass": "SpineFamily",
+					"sid": 512345678901258,
+					"parameters": {
+						"width": "CellSize",
+						"height": "CellSize"
+					}
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "SpineFamily",
-					"sid": 459099557144343,
+					"sid": 759815116771132,
 					"parameters": {
 						"animation-name": "SpineFamily.AnimationName(0)",
 						"loop": true,
@@ -313,8 +350,8 @@
 					}
 				}
 			],
-			"sid": 162537523263492
+			"sid": 991181977186483
 		}
 	],
-	"sid": 818719127771301
+	"sid": 721454746774725
 }

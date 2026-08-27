@@ -51,8 +51,22 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -72,7 +86,10 @@
 			"List_Skins",
 			"ls_clamshells",
 			"ls_crab",
-			"ls_divers"
+			"ls_divers",
+			"BG_SHADER",
+			"TiledBackground",
+			"Mouse"
 		],
 		"subfolders": []
 	},
@@ -93,14 +110,25 @@
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet v1",
-			"Event sheet v2"
+			"ES_Main",
+			"ES_Camera",
+			"ES_LIST",
+			"ES_Grid"
 		],
 		"subfolders": []
 	},
 	"rootFileFolders": {
 		"script": {
-			"items": [],
+			"items": [
+				{
+					"name": "c3-runtime-bridge.js",
+					"type": "application/javascript",
+					"sid": 880235758216172,
+					"script-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"sound": {
@@ -317,15 +345,17 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "ui-styles.css",
+					"type": "text/css",
+					"sid": 512345678901280,
+					"file-info": {
+						"purpose": "stylesheet"
+					}
 				}
 			],
-			"subfolders": [
-				{
-					"items": [],
-					"subfolders": [],
-					"name": "panda"
-				}
-			]
+			"subfolders": []
 		}
 	},
 	"timelines": {
@@ -385,7 +415,7 @@
 		"gpuPreference": "high-performance",
 		"scriptsType": "module",
 		"framerateMode": "vsync",
-		"sampling": "trilinear",
+		"sampling": "nearest",
 		"downscaling": "medium",
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",
@@ -399,7 +429,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 854,
-	"viewportHeight": 480,
+	"viewportWidth": 1800,
+	"viewportHeight": 1800,
 	"firstLayout": null
 }
