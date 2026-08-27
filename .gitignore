@@ -1,2 +1,28 @@
+# UI state files (Construct 3 editor)
 *.uistate.json
+
+# TypeScript definitions (C3)
 ts-defs
+
+# Node / dependencies
+node_modules/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Construct 3 export / build output
+export/
+build/
+dist/
+www/
+
+# Packaged project backups
+*.c3p
+*.c3z
+/anitest
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/mcp.json
